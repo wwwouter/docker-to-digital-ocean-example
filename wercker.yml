@@ -1,4 +1,6 @@
-box: wercker-labs/docker
+#box: wercker-labs/docker
+box: ami-9d4210f4
+box-type: ami
 build:
     steps:
         - script:
