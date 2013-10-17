@@ -1,5 +1,6 @@
 #box: wercker-labs/docker
-box: ami-9d4210f4
+#box: ami-9d4210f4
+box: ami-1bbbe972
 box-type: ami
 build:
     steps:
@@ -7,10 +8,9 @@ build:
             name: Docker version
             code: sudo docker version
         - script:
-            name: Docker update
+            name: gitconfig
             code: |
-                sudo apt-get update -q -yy
-                sudo apt-get install lxc-docker -yy
+                cat $HOME/.gitconfig
         - script:
             name: Docker version
             code: sudo docker version
